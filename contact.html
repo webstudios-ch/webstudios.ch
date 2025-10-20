@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | webstudios.ch</title>
+    <meta name="description" content="Kontaktieren Sie webstudios in Küssnacht (SZ) für Ihr Webdesign-Projekt. Fordern Sie eine gratis Offerte an oder vereinbaren Sie direkt einen Termin.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta property="og:title" content="Kontakt aufnehmen | webstudios.ch">
+    <meta property="og:description" content="Starten Sie Ihr Webprojekt. Wir freuen uns auf Ihre Nachricht aus Küssnacht und Umgebung.">
+    <meta property="og:image" content="https://www.webstudios.ch/social-preview.png"> <meta property="og:url" content="https://www.webstudios.ch/contact.html"> <meta property="og:type" content="website">
+    <meta property="og:site_name" content="webstudios">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8F7F4] text-[#2c2c2c]">
+
+<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+    <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html">
+                <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo">
+            </a>
+        </div>
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+            <a href="services.html" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
+            <a href="prozess.html" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+            <a href="about.html" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+            <a href="contact.html" class="text-black font-medium transition-colors duration-300 text-lg">Kontakt</a> </div>
+        <div class="hidden md:flex items-center">
+            <a href="contact.html" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                Gratis Offerte anfragen
+            </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-black focus:outline-none">
+            <span class="sr-only">Menü öffnen</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+        </button>
+    </nav>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+    <a href="services.html" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
+    <a href="prozess.html" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
+    <a href="about.html" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
+    <a href="contact.html" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Kontakt</a> <a href="contact.html" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+</div>
+
+    <main>
+        <section class="pt-48 pb-16 bg-gradient-to-b from-orange-50/50 to-gray-50 text-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
+                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900">Lassen Sie uns reden.</h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Wir freuen uns auf Ihre Nachricht und sind bereit, Ihre Vision in die Realität umzusetzen.</p>
+            </div>
+        </section>
+
+        <section id="contact-form" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+                    <div class="bg-white p-8 rounded-3xl fade-in-up border border-gray-200 shadow-lg">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Schreiben Sie uns eine Nachricht</h2>
+
+                        <div x-data="{ hasWebsite: false }">
+                           <form action="https://formspree.io/f/mrbarvlj" method="POST">
+                               <input type="hidden" name="_next" value="danke.html">
+
+                               <div class="space-y-6">
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <input type="text" name="vorname" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Vorname*">
+                                        </div>
+                                        <div>
+                                            <input type="text" name="nachname" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Nachname*">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <input type="text" name="firma" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Firma*">
+                                        </div>
+                                        <div>
+                                            <input type="tel" name="telefon" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Telefonnummer*">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <input type="email" name="email" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="E-Mail-Adresse*">
+                                    </div>
+
+                                    <div class="border-t border-gray-200 pt-6">
+                                         <p class="text-left text-sm font-medium text-gray-700 mb-2">Wunschtermin für ein Gespräch*</p>
+                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                             <div>
+                                                 <input type="text" id="datepicker" name="wunschtermin" required class="w-full bg-gray-50 border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500" placeholder="Datum auswählen*">
+                                             </div>
+                                             <div>
+                                                 <input type="text" id="timepicker" name="wunschzeit" required class="w-full bg-gray-50 border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500" placeholder="Zeit auswählen*">
+                                             </div>
+                                         </div>
+                                    </div>
+
+                                    <div>
+                                        <textarea name="nachricht" id="message" rows="5" required class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Ihre Nachricht*"></textarea>
+                                    </div>
+
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-3">
+                                            <input x-model="hasWebsite" type="checkbox" name="hat-webseite-checkbox" id="has-website" class="h-4 w-4 bg-gray-100 border-gray-300 text-orange-600 focus:ring-orange-500 rounded">
+                                            <label for="has-website" class="text-gray-600">Ich habe bereits eine Webseite</label>
+                                        </div>
+
+                                        <div x-show="hasWebsite" x-transition>
+                                            <input type="url" name="website-url" x-bind:required="hasWebsite" class="w-full bg-gray-50 border-gray-300 text-gray-900 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:outline-none transition" placeholder="Link zu Ihrer Webseite*">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="w-full inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 glow-on-hover">
+                                            Nachricht senden
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="text-gray-900 fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="text-3xl font-bold mb-6">Direkter Kontakt</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-[#E86A33] text-2xl mt-1 mr-4"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Standort</h3>
+                                    <p class="text-gray-600">Küssnacht, Schwyz<br>Schweiz</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-[#E86A33] text-2xl mt-1 mr-4"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">E-Mail</h3>
+                                    <a href="mailto:info@webstudios.ch" class="text-gray-600 hover:text-black transition-colors">info@webstudios.ch</a> </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-[#E86A33] text-2xl mt-1 mr-4"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Telefon</h3>
+                                    <a href="tel:+41796769034" class="text-gray-600 hover:text-black transition-colors">079 676 90 34</a> </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 pt-8 border-t border-gray-200">
+                             <h3 class="text-xl font-semibold mb-4">Folgen Sie uns</h3>
+                             <div class="flex space-x-6 text-3xl text-gray-500">
+                                 <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                                 <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                 <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                 <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
+     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
+             <div class="space-y-4 md:pt-10"> <a href="index.html" class="inline-block"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> </a> <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> </div>
+             <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3> <ul class="space-y-2"> <li><a href="services.html" class="hover:text-black transition-colors">Services</a></li> <li><a href="prozess.html" class="hover:text-black transition-colors">Prozess</a></li> <li><a href="about.html" class="hover:text-black transition-colors">Über uns</a></li> <li><a href="contact.html" class="hover:text-black transition-colors">Kontakt</a></li> </ul> </div>
+             <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3> <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500"> <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a> <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a> </div> </div>
+             <div class="h-28"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" class="w-full h-full rounded-lg border-2 border-gray-200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div>
+         </div>
+         <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm"> <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="impressum.html" class="hover:text-black transition-colors">Impressum</a> | <a href="datenschutz.html" class="hover:text-black transition-colors">Datenschutzerklärung</a></p> </div>
+     </div>
+ </footer>
+
+    <script src="script.js"></script>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="89865d1c-c7cd-4bab-bca1-3ea791abce92" data-blockingmode="auto" type="text/javascript" async></script>
+
+    <script>
+        flatpickr.localize(flatpickr.l10ns.de);
+
+        flatpickr("#datepicker", {
+            altInput: true,
+            altFormat: "j. F Y",
+            dateFormat: "Y-m-d",
+            minDate: "today",
+        });
+
+        flatpickr("#timepicker", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            minuteIncrement: 30,
+        });
+    </script>
+</body>
+</html>
