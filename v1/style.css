@@ -1,0 +1,126 @@
+/* ==========================================================================
+   NEUE FARBPALETTE (Warm & Professionell)
+   ========================================================================== */
+:root {
+    --color-bg: #F8F7F4;       /* Heller Creme-Hintergrund */
+    --color-card-bg: #FFFFFF;  /* Weisser Hintergrund für Karten */
+    --color-text: #2c2c2c;      /* Dunkler Text für Lesbarkeit */
+    --color-text-subtle: #8a8a8a; /* Hellerer Text für Untertitel */
+    --color-accent: #E86A33;    /* Warmes Terrakotta/Orange */
+    --color-accent-hover: #D05F2C; /* Dunkleres Orange für Hover */
+    --color-border: #e5e7eb;    /* Dezente Linien/Ränder */
+}
+
+/* Allgemeine Stile */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Shimmer-Effekt, angepasst für hellen Hintergrund */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.shimmer-text {
+    background: linear-gradient(90deg, var(--color-text), var(--color-accent), var(--color-text));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s infinite linear;
+    display: inline-block;
+    padding-bottom: 0.1em;
+}
+
+/* Fade-in-up animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card hover effect, angepasst für helles Design */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-hover:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+}
+
+/* Pulsing animation mit neuer Akzentfarbe */
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0px hsla(19, 82%, 56%, 0.5); }
+    100% { box-shadow: 0 0 0 20px hsla(19, 82%, 56%, 0); }
+}
+.package-pulse {
+    animation: pulse-ring 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Shimmer-Effekt für Logo mit neuer Akzentfarbe */
+@keyframes image-glow {
+    0%, 100% { filter: drop-shadow(0 0 8px hsla(19, 82%, 56%, 0.5)); }
+    50% { filter: drop-shadow(0 0 16px hsla(19, 82%, 56%, 0.3)); }
+}
+.shimmer-logo {
+    animation: image-glow 3s infinite ease-in-out;
+    transition: all 0.3s;
+}
+
+/* Hero Blob Animation */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+  animation: blob 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* Button Glow on Hover mit neuer Akzentfarbe */
+@keyframes button-glow {
+    0%, 100% { box-shadow: 0 0 8px hsla(19, 82%, 56%, 0.4), 0 0 12px hsla(19, 82%, 56%, 0.2); }
+    50% { box-shadow: 0 0 16px hsla(19, 82%, 56%, 0.6), 0 0 24px hsla(19, 82%, 56%, 0.4); }
+}
+.glow-on-hover:hover {
+  animation: button-glow 1.5s infinite ease-in-out;
+}
+
+/* Icon Animations mit neuer Akzentfarbe */
+@keyframes icon-glow {
+    0%, 100% { filter: drop-shadow(0 0 4px hsla(19, 82%, 56%, 0.5)); }
+    50% { filter: drop-shadow(0 0 12px hsla(19, 82%, 56%, 0.8)); }
+}
+.group:hover .icon-glow-on-hover {
+  animation: icon-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes icon-vibrate {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(-1deg); }
+  50% { transform: translateX(2px) rotate(1deg); }
+  75% { transform: translateX(-2px) rotate(-1deg); }
+}
+.group:hover .icon-vibrate-on-hover {
+  animation: icon-vibrate 0.15s linear 2;
+}
+
+/* Cookie Banner (bleibt dunkel für den Kontrast) */
+@media screen and (max-width:720px) { #cookiebanner a.c-button { width:100%; box-sizing:border-box; text-align:center; margin-bottom:20px;} #c-right { float:none; } #c-left { float:none; } #cookiebanner p.c-message { margin-bottom:20px; } }
+@media screen and (min-width:720px) { #cookiebanner #c-left { float:left; max-width:80%; } #cookiebanner #c-right { float:right; } }
+#cookiebanner { box-sizing: border-box; background-color:rgb(36,36,39); opacity: 0.9; width:100%; padding:25px 40px; position: fixed; z-index: 2147483645; bottom:-800px }
+#cookiebanner p { font-size:14px; line-height:1.4; }
+#cookiebanner .c-header { text-transform:uppercase; color:#fff; font-weight:bold; margin-bottom:4px; }
+#cookiebanner p.c-message { font-size:14px; color:#999; }
+#cookiebanner a { font-weight:bold; color:#999; }
+#cookiebanner a:hover { color:#fff; }
+#cookiebanner a.c-button { border-radius: 4px; background-color: rgb(255,255,255); box-shadow: 0 2px 0 0 rgb(221,221,221); border:1px solid rgb(221,221,221); padding:12px 60px; text-decoration:none; display:inline-block; vertical-align:middle; margin-top:10px; color:#666; font-size:16px; transition:.2s; }
+#cookiebanner a.c-button:hover { box-shadow:none; background-color:#f8f8f8; }
