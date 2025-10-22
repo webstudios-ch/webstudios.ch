@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { root: null, threshold: 0.1 });
     targets.forEach(target => { observer.observe(target); });
 
-    // --- Logik für Kontaktformular-Checkbox (nur auf contact.html relevant) ---
+    // --- Logik für Kontaktformular-Checkbox (nur auf kontakt.html relevant) ---
     const hasWebsiteCheckbox = document.getElementById('has-website');
     const websiteUrlField = document.getElementById('website-url-field');
     if (hasWebsiteCheckbox && websiteUrlField) {
