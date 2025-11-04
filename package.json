@@ -1,0 +1,24 @@
+{
+  "name": "webstudios.ch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:init": "npx tailwindcss init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webstudios-ch/webstudios.ch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webstudios-ch/webstudios.ch/issues"
+  },
+  "homepage": "https://github.com/webstudios-ch/webstudios.ch#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.16"
+  }
+}
