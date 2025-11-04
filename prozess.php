@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+<script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prozess | webstudios.ch</title>
+    <meta name="description" content="Erfahren Sie, wie webstudios in Küssnacht (SZ) Ihr Webprojekt umsetzt – von der Strategie bis zum Launch. Transparenter Prozess für optimale Ergebnisse.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta property="og:title" content="Unser Webdesign-Prozess | webstudios.ch">
+    <meta property="og:description" content="Schritt für Schritt zu Ihrer neuen Webseite. Entdecken Sie unseren bewährten Prozess in Küssnacht.">
+    <meta property="og:image" content="https://www.webstudios.ch/social-preview.png"> <meta property="og:url" content="https://www.webstudios.ch/./prozess"> <meta property="og:type" content="website">
+    <meta property="og:site_name" content="webstudios">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#F8F7F4] text-[#2c2c2c]">
+
+    <header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+        <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+            
+        <div class="flex-shrink-0 flex items-center">
+            <a href="./">
+                <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
+            </a>
+        </div>
+
+            <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+                <a href="./services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
+                <a href="./prozess" class="text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+                <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
+            </div>
+            
+            <div class="hidden md:flex items-center">
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                    Gratis Offerte anfragen
+                </a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-black focus:outline-none">
+                <span class="sr-only">Menü öffnen</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+        <a href="./services" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
+        <a href="./prozess" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Prozess</a>
+        <a href="./über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
+        <a href="./kontakt" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Kontakt</a>
+        <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+    </div>
+
+    <main>
+        <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 fade-in-up">Unsere Vorgehensweise</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto fade-in-up">Vom ersten Gespräch bis zum Livegang – wir begleiten unsere Partner mit einem klaren und transparenten Prozess.</p>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <div class="relative grid grid-cols-[1fr_auto_1fr] gap-x-12">
+                    <div class="col-start-2 row-start-1 row-end-12 w-0.5 h-full bg-gray-200 justify-self-center"></div>
+
+                    <div class="col-start-3 row-start-1 my-8 fade-in-up">
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">☕️ Erstgespräch & Analyse</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600"><p>Zusammen besprechen wir Ihre Anforderungen und analysieren Ihre Zielgruppe.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-1 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">1</span></div>
+                    
+                    <div class="col-start-1 row-start-2 my-8 fade-in-up justify-self-end text-right">
+                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">🧭 Strategie & Konzeption</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600 text-left"><p>Wir entwickeln eine massgeschneiderte Strategie und ein detailliertes Konzept für Ihre Webseite.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-2 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">2</span></div>
+                    
+                    <div class="col-start-3 row-start-3 my-8 fade-in-up">
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">🎨 Design & Prototyping</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600"><p>Wir erstellen ein ansprechendes Design und funktionale Prototypen für Ihre Zustimmung.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-3 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">3</span></div>
+
+                    <div class="col-start-1 row-start-4 my-8 fade-in-up justify-self-end text-right">
+                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">💻 Entwicklung & Umsetzung</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600 text-left"><p>Unsere Experten programmieren und setzen Ihr Projekt technisch präzise um.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-4 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">4</span></div>
+
+                    <div class="col-start-3 row-start-5 my-8 fade-in-up">
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">💬 Feedback & Korrekturen</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600"><p>Sie geben Ihr Feedback, und wir optimieren die Webseite entsprechend.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-5 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">5</span></div>
+
+                    <div class="col-start-1 row-start-6 my-8 fade-in-up justify-self-end text-right">
+                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">🚀 Launch & Go-Live</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600 text-left"><p>Wir starten Ihre Webseite erfolgreich und sorgen für einen reibungslosen Einstieg.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-6 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">6</span></div>
+                    
+                    <div class="col-start-3 row-start-7 my-8 fade-in-up">
+                        <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                                <h3 class="font-bold text-gray-900 text-xl">🛠️ Support & Wartung</h3>
+                                <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                                <div class="px-6 pb-6 text-gray-600"><p>Nach dem Launch bieten wir kontinuierlichen Support und regelmässige Wartung an.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-20 col-start-2 row-start-7 w-12 h-12 rounded-full bg-[#E86A33] flex items-center justify-center self-center justify-self-center"><span class="font-semibold text-lg text-white">7</span></div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900">Bereit, den ersten Schritt zu machen?</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Lassen Sie uns gemeinsam Ihr Projekt starten. Kontaktieren Sie uns für ein unverbindliches Erstgespräch.</p>
+                <a href="./kontakt" class="mt-8 inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 glow-on-hover">
+                    Jetzt Kontakt aufnehmen
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            
+<div class="space-y-4 md:pt-10"> 
+    <a href="./" class="inline-block">
+        <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> 
+    </a>
+    <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> 
+</div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="./services" class="hover:text-black transition-colors">Services</a></li> 
+                    <li><a href="./prozess" class="hover:text-black transition-colors">Prozess</a></li>
+                    <li><a href="./über-uns" class="hover:text-black transition-colors">Über uns</a></li>
+                    <li><a href="./kontakt" class="hover:text-black transition-colors">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500">
+                    <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="h-28"> 
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" 
+                    class="w-full h-full rounded-lg border-2 border-gray-200"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+       <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
+    <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
+</div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>

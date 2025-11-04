@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+<script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Uns | webstudios.ch</title>
+    <meta name="description" content="Lernen Sie webstudios kennen – Ihre junge und innovative Webdesign-Agentur aus Küssnacht (SZ). Wir bringen Ihre digitale Vision zum Leben.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta property="og:title" content="Über Uns | webstudios.ch">
+    <meta property="og:description" content="Ihre Partner für modernes Webdesign, AI und digitale Lösungen in Küssnacht am Rigi.">
+    <meta property="og:image" content="https://www.webstudios.ch/social-preview.png"> <meta property="og:url" content="https://www.webstudios.ch/./über-uns"> <meta property="og:type" content="website">
+    <meta property="og:site_name" content="webstudios">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8F7F4] text-[#2c2c2c]">
+
+<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+    <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+        
+        <div class="flex-shrink-0 flex items-center">
+            <a href="./">
+                <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
+            </a>
+        </div>
+
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+            <a href="./services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
+            <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+            <a href="./über-uns" class="text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+            <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+            <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                Gratis Offerte anfragen
+            </a>
+        </div>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-black focus:outline-none">
+            <span class="sr-only">Menü öffnen</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+        </button>
+    </nav>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+    <a href="./services" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
+    <a href="./prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
+    <a href="./über-uns" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Über uns</a>
+    <a href="./kontakt" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Kontakt</a>
+    <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+</div>
+
+    <main>
+        <section id="über-uns" class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <div class="text-center mb-16 fade-in-up">
+                    <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900">Unsere Philosophie</h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Wir glauben an die Kraft von herausragendem Design und sauberem Code, um Marken digital zum Leben zu erwecken.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center fade-in-up">
+                    <div class="space-y-4 p-4 group">
+                        <svg class="h-16 w-16 text-[#E86A33] mx-auto icon-glow-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        <h3 class="text-3xl font-semibold text-gray-900">Innovation</h3>
+                        <p class="text-gray-500 text-lg">Wir nutzen modernste Technologien, um Webseiten zu schaffen, die sich von der Masse abheben.</p>
+                    </div>
+                    <div class="space-y-4 p-4 group">
+                        <svg class="h-16 w-16 text-[#E86A33] mx-auto transition-transform duration-500 ease-in-out group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.438.995s.145.755.438.995l1.003.827c.424.35.534.954.26 1.431l-1.296 2.247a1.125 1.125 0 01-1.37.49l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.063-.374-.313-.686-.645-.87a6.52 6.52 0 01-.22-.127c-.324-.196-.72-.257-1.075-.124l-1.217.456a1.125 1.125 0 01-1.37-.49l-1.296-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.437-.995s-.145-.755-.437-.995l-1.004-.827a1.125 1.125 0 01-.26-1.431l1.296-2.247a1.125 1.125 0 011.37-.49l1.217.456c.355.133.75.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <h3 class="text-3xl font-semibold text-gray-900">Massarbeit</h3>
+                        <p class="text-gray-500 text-lg">Jedes Projekt ist einzigartig. Wir entwickeln Lösungen, die exakt auf Ihre Vision zugeschnitten sind.</p>
+                    </div>
+                    <div class="space-y-4 p-4 group">
+                        <svg class="h-16 w-16 text-[#E86A33] mx-auto icon-vibrate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        <h3 class="text-3xl font-semibold text-gray-900">Partnerschaft</h3>
+                        <p class="text-gray-500 text-lg">Wir sind Ihr verlässlicher Partner, von der ersten Idee bis zur laufenden Wartung.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16 fade-in-up">
+                    <a href="./technologien" class="inline-block bg-transparent hover:bg-orange-50 text-orange-600 hover:text-orange-700 font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 border-2 border-orange-500 hover:border-orange-600">
+                        Unser Tech Stack ansehen
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="team" class="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-20">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-lg mx-auto fade-in-up">
+                    <div class="bg-white rounded-3xl shadow-xl p-8 text-center card-hover border border-gray-200">
+                        <img src="magnus.jpg" alt="Magnus" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover ring-2 ring-orange-500">
+                        <h3 class="text-2xl font-semibold text-gray-900">Magnus</h3>
+                        <p class="text-lg text-[#E86A33] mb-6">CEO & Gründer</p>
+                        <p class="text-gray-600 text-center">
+                            Mit jahrelanger Erfahrung und einer Leidenschaft für sauberen Code und intuitives Design verwandelt Magnus Visionen in beeindruckende, funktionale Webseiten, die begeistern und Ergebnisse liefern.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+                <h2 class="text-4xl font-bold text-gray-900">Bereit, Ihre Vision zu starten?</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Lassen Sie uns gemeinsam etwas Grossartiges schaffen. Kontaktieren Sie uns für ein unverbindliches Erstgespräch.</p>
+                <a href="./kontakt" class="mt-8 inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 glow-on-hover">
+                    Jetzt Kontakt aufnehmen
+                </a>
+            </div>
+        </section>
+    </main>
+    
+<footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            
+<div class="space-y-4 md:pt-10"> 
+    <a href="./" class="inline-block">
+        <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> 
+    </a>
+    <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> 
+</div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="./services" class="hover:text-black transition-colors">Services</a></li> 
+                    <li><a href="./prozess" class="hover:text-black transition-colors">Prozess</a></li>
+                    <li><a href="./über-uns" class="hover:text-black transition-colors">Über uns</a></li>
+                    <li><a href="./kontakt" class="hover:text-black transition-colors">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500">
+                    <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="h-28"> 
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" 
+                    class="w-full h-full rounded-lg border-2 border-gray-200"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+       <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
+    <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
+</div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

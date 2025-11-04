@@ -2,33 +2,14 @@
 <html lang="de" class="scroll-smooth">
 
 <head>
-
-    <style>
-      body { 
-        visibility: hidden; 
-        opacity: 0; 
-      }
-    </style>
-
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webdesign Agentur | webstudios.ch</title>
+        <title>Webdesign Agentur | webstudios.ch</title>
     <meta name="description" content="webstudios ist Ihre Webdesign-Agentur in Küssnacht (SZ). Wir erstellen moderne, schnelle Webseiten & digitale Lösungen für KMU. Jetzt Erstgespräch vereinbaren!">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
     <meta property="og:title" content="webstudios | Professionelles Webdesign aus Küssnacht">
     <meta property="og:description" content="Ihre Experten für moderne Webseiten, AI-Integration und digitale Präsenz in der Region Schwyz.">
     <meta property="og:image" content="https://www.webstudios.ch/social-preview.png"> <meta property="og:url" content="https://www.webstudios.ch/"> <meta property="og:type" content="website">
     <meta property="og:site_name" content="webstudios">
 
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="style.css">
+    <?php include '_head-common.php'; ?>
 </head>
 <script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -336,7 +317,7 @@
     </div>
 </footer>
 
-    <script src="script.js"></script>
-   
+    <?php include '_scripts-footer.php'; ?>
+    
 </body>
 </html>
