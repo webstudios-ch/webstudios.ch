@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung | webstudios.ch</title>
     <meta name="description" content="Unsere Datenschutzerklärung. Erfahren Sie, wie Scherrer WebStudios mit Ihren Daten umgeht und Ihre Privatsphäre schützt.">
-    <meta name="robots" content="noindex, nofollow"> <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="robots" content="noindex, nofollow"> 
+
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
     <meta property="og:title" content="Datenschutzerklärung | webstudios.ch">
@@ -18,6 +20,7 @@
     <meta property="og:site_name" content="webstudios">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,88 +28,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
-    <script src="script.js"></script>
-    
-    <script>
-      requestAnimationFrame(() => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-      });
-    </script>
-<body x-data="{ isMobileMenuOpen: false }" class="bg-[#F8F7F4] text-[#2c2c2c] flex flex-col min-h-screen">
+<body class="bg-[#F8F7F4] text-[#2c2c2c] flex flex-col min-h-screen">
 
-<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
-    <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
-        <div class="flex-shrink-0 flex items-center">
-            <a href="/"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
-            </a>
-        </div>
-        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
-            <a href="/services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
-            <a href="/prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
-            <a href="/ueber-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
-            <a href="/kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
-        </div>
-        <div class="hidden md:flex items-center">
-            <a href="/kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
-                Gratis Offerte anfragen
-            </a>
-        </div>
-        <button 
-            id="mobile-menu-button" 
-            @click="isMobileMenuOpen = !isMobileMenuOpen" 
-            class="md:hidden text-gray-600 hover:text-black focus:outline-none"
-            aria-label="Menü öffnen"
-            aria-controls="mobile-menu-overlay"  
-            :aria-expanded="isMobileMenuOpen.toString()" 
-        >
-            <span class="sr-only">Menü öffnen</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-        </button>
-    </nav>
-</header>
-<div 
-    x-show="isMobileMenuOpen" 
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 scale-95"
-    x-transition:enter-end="opacity-100 scale-100"
-    x-transition:leave="transition ease-in duration-200"
-    x-transition:leave-start="opacity-100 scale-100"
-    x-transition:leave-end="opacity-0 scale-95"
-    class="fixed inset-0 z-[60] bg-[#F8F7F4] p-8 flex flex-col items-center justify-center md:hidden" 
-    style="display: none;" 
-    @click.away="isMobileMenuOpen = false"  
-    id="mobile-menu-overlay"
->
-    <button 
-        @click="isMobileMenuOpen = false" 
-        class="absolute top-7 right-7 text-gray-500 hover:text-black"
-        aria-label="Menü schliessen"
-    >
-        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
-    <nav class="flex flex-col items-center space-y-8">
-        <a href="/services" @click="isMobileMenuOpen = false" class="text-3xl font-medium text-gray-500 hover:text-[#2c2c2c] transition-colors">Services</a>
-        <a href="/prozess" @click="isMobileMenuOpen = false" class="text-3xl font-medium text-gray-500 hover:text-[#2c2c2c] transition-colors">Prozess</a>
-        <a href="/ueber-uns" @click="isMobileMenuOpen = false" class="text-3xl font-medium text-gray-500 hover:text-[#2c2c2c] transition-colors">Über uns</a>
-        <a href="/kontakt" @click="isMobileMenuOpen = false" class="text-3xl font-medium text-gray-500 hover:text-[#2c2c2c] transition-colors">Kontakt</a>
-        <a href="/kontakt" @click="isMobileMenuOpen = false" class="mt-8 inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300">
-             Gratis Offerte anfragen
-        </a>
-    </nav>
-</div>
+    <header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+        <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+            
+            <div class="flex-shrink-0 flex items-center">
+                <a href="./"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
+                </a>
+            </div>
 
-    <main>
+            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+                <a href="./services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
+                <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+                <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
+            </div>
+            
+            <div class="hidden lg:flex items-center">
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                    Gratis Offerte anfragen
+                </a>
+            </div>
+
+            <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-black focus:outline-none">
+                <span class="sr-only">Menü öffnen</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+        <a href="./services" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
+        <a href="./prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
+        <a href="./über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
+        <a href="./kontakt" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Kontakt</a>
+        <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+    </div>
+
+    <main class="flex-grow">
         <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
-                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900">Datenschutzerklärung</h1>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 break-words hyphens-auto">Datenschutzerklärung</h1>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Wie wir Ihre Daten schützen.</p>
             </div>
         </section>
@@ -114,36 +78,39 @@
         <section class="py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl content-container">
 
-                <p>Stand: 19. Oktober 2025</p>
+                <p class="text-sm text-gray-500 mb-6">Stand: 19. Oktober 2025</p>
 
-                <h2>1. Verantwortliche Stelle</h2>
-                <p>
-                  <strong>Verantwortlich für die Datenverarbeitung dieser Webseite:</strong><br>
-                    Scherrer WebStudios<br>
-                    Inhaber: Magnus Scherrer (minderjährig)<br>
-                    Hausmatt 8<br>
-                    6405 Immensee<br>
-                    Schweiz
-                </p>
+                <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">1. Verantwortliche Stelle</h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>
+                      <strong>Verantwortlich für die Datenverarbeitung dieser Webseite:</strong><br>
+                        Scherrer WebStudios<br>
+                        Inhaber: Magnus Scherrer (minderjährig)<br>
+                        Hausmatt 8<br>
+                        6405 Immensee<br>
+                        Schweiz
+                    </p>
 
-                <p>
-                    <strong>Gesetzliche Vertretung durch die Eltern:</strong><br>
-                    Solveig Scherrer<br>
-                    Hausmatt 8, 6405 Immensee<br>
-                    Stefan Scherrer<br>
-                    Ahornweg 19c, 6405 Immensee
-                </p>
-                <p>
-                    E-Mail: info@webstudios.ch<br>
-                    Link zum Impressum: <a href="/impressum">Impressum</a> </p>
-                <p>
-                    Als minderjähriger Inhaber handle ich mit der Zustimmung meiner gesetzlichen Vertreter. Für alle datenschutzrechtlichen Anliegen können Sie sich an die oben genannte Adresse oder E-Mail wenden.
-                </p>
+                    <p>
+                        <strong>Gesetzliche Vertretung durch die Eltern:</strong><br>
+                        Solveig Scherrer<br>
+                        Hausmatt 8, 6405 Immensee<br>
+                        Stefan Scherrer<br>
+                        Ahornweg 19c, 6405 Immensee
+                    </p>
+                    <p>
+                        E-Mail: info@webstudios.ch<br>
+                        Link zum Impressum: <a href="./impressum" class="text-[#E86A33] hover:underline">Impressum</a>
+                    </p>
+                    <p>
+                        Als minderjähriger Inhaber handle ich mit der Zustimmung meiner gesetzlichen Vertreter. Für alle datenschutzrechtlichen Anliegen können Sie sich an die oben genannte Adresse oder E-Mail wenden.
+                    </p>
+                </div>
 
                 <hr class="my-8 border-gray-200">
 
-                <h2>2. Von PrivacyBee generierte Datenschutzhinweise</h2>
-                <p>Nachfolgend finden Sie die automatisch generierten und aktuell gehaltenen Datenschutzhinweise unseres Dienstleisters PrivacyBee AG zu den von uns eingesetzten Diensten und Cookies.</p>
+                <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">2. Von PrivacyBee generierte Datenschutzhinweise</h2>
+                <p class="text-gray-600 mb-6">Nachfolgend finden Sie die automatisch generierten und aktuell gehaltenen Datenschutzhinweise unseres Dienstleisters PrivacyBee AG zu den von uns eingesetzten Diensten und Cookies.</p>
                 
                 <script src="https://app.privacybee.io/widget.js" defer></script>
                 <privacybee-widget website-id="cmhjhi5b404opy97sv5uffi8j" type="dsg" lang="de"></privacybee-widget>
@@ -157,7 +124,7 @@
          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start"> 
              
              <div class="space-y-4 md:pt-10"> 
-                 <a href="/" class="inline-block"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> 
+                 <a href="./" class="inline-block"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> 
                  </a>
                  <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> 
              </div>
@@ -165,10 +132,10 @@
              <div>
                  <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3>
                  <ul class="space-y-2">
-                     <li><a href="/services" class="hover:text-black transition-colors">Services</a></li> 
-                     <li><a href="/prozess" class="hover:text-black transition-colors">Prozess</a></li>
-                     <li><a href="/ueber-uns" class="hover:text-black transition-colors">Über uns</a></li>
-                     <li><a href="/kontakt" class="hover:text-black transition-colors">Kontakt</a></li>
+                     <li><a href="./services" class="hover:text-black transition-colors">Services</a></li> 
+                     <li><a href="./prozess" class="hover:text-black transition-colors">Prozess</a></li>
+                     <li><a href="./über-uns" class="hover:text-black transition-colors">Über uns</a></li>
+                     <li><a href="./kontakt" class="hover:text-black transition-colors">Kontakt</a></li>
                  </ul>
              </div>
              
@@ -196,11 +163,24 @@
          </div>
          
         <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
-            <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
+            <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="./impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="./datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
         </div> 
      </div>
-</footer>
+    </footer>
+
+    <script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
     <script src="script.js"></script>
-    </body>
+    
+    <script>
+      requestAnimationFrame(() => {
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+      });
+    </script>
+
+</body>
 </html>

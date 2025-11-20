@@ -19,6 +19,7 @@
     <meta property="og:site_name" content="webstudios">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,45 +27,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
-    <script src="script.js"></script>
-    
-    <script>
-      requestAnimationFrame(() => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-      });
-    </script>
 <body class="bg-[#F8F7F4] text-[#2c2c2c]">
 
-<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
-    <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
-        
-        <div class="flex-shrink-0 flex items-center">
-            <a href="/"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
-            </a>
-        </div>
+    <header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+        <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+            
+            <div class="flex-shrink-0 flex items-center">
+                <a href="./">
+                    <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
+                </a>
+            </div>
 
-        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
-            <a href="/services" class="text-black font-medium transition-colors duration-300 text-lg">Services</a> <a href="/prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a> <a href="/über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a> <a href="/kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a> </div>
-        
-        <div class="hidden md:flex items-center">
-            <a href="/kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300"> Gratis Offerte anfragen
-            </a>
-        </div>
+            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+                <a href="./services" class="text-black font-medium transition-colors duration-300 text-lg">Services</a>
+                <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+                <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
+            </div>
+            
+            <div class="hidden lg:flex items-center">
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                    Gratis Offerte anfragen
+                </a>
+            </div>
 
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-black focus:outline-none">
-            <span class="sr-only">Menü öffnen</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-        </button>
-    </nav>
-</header>
-<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
-    <a href="/services" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Services</a> <a href="/prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a> <a href="/über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a> <a href="/kontakt" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Kontakt</a> <a href="/kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a> </div>
+            <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-black focus:outline-none">
+                <span class="sr-only">Menü öffnen</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+        <a href="./services" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Services</a>
+        <a href="./prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
+        <a href="./über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
+        <a href="./kontakt" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Kontakt</a>
+        <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+    </div>
 
     <main>
         <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50 text-center">
@@ -82,12 +83,13 @@
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Starter</h3>
                         <p class="text-gray-600 mb-6">Ideal für den ersten professionellen Online-Auftritt.</p>
                         <p class="text-[#E86A33] text-5xl font-bold mb-6">CHF 99.90</p>
-                        <a href="/kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8">Projekt starten</a> <ul class="space-y-4 text-gray-800 text-left">
+                        <ul class="space-y-4 text-gray-800 text-left mb-8">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>1 Seite</strong><span class="block text-sm text-gray-500">Eine moderne Onepage- oder Landingpage-Webseite.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Responsive Design</strong><span class="block text-sm text-gray-500">Perfekte Darstellung auf allen Geräten.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Kontaktformular</strong><span class="block text-sm text-gray-500">Damit Ihre Kunden Sie einfach erreichen können.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Basic SEO</strong><span class="block text-sm text-gray-500">Grundlegende Optimierung für Google.</span></div></li>
                         </ul>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Projekt starten</a>
                     </div>
 
                     <div id="business-card" class="bg-white ring-2 ring-inset ring-orange-500 rounded-3xl p-8 card-hover fade-in-up relative transform lg:scale-110 overflow-hidden transition-all duration-300">
@@ -95,25 +97,27 @@
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2 mt-6">Business</h3>
                         <p class="text-gray-600 mb-6">Die Komplettlösung für wachsende Unternehmen.</p>
                         <p class="text-[#E86A33] text-5xl font-bold mb-6">CHF 249.90</p>
-                        <a href="/kontakt" class="w-full text-center inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 mb-8 glow-on-hover">Projekt starten</a> <ul class="space-y-4 text-gray-800 text-left">
+                        <ul class="space-y-4 text-gray-800 text-left mb-8">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Bis zu 5 Seiten</strong><span class="block text-sm text-gray-500">z.B. Home, Über uns, Leistungen, Kontakt.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Individuelles Design</strong><span class="block text-sm text-gray-500">Einzigartiges Design, das Ihre Marke widerspiegelt.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>CMS-Integration (optional)</strong><span class="block text-sm text-gray-500">Bearbeiten Sie Inhalte wie Texte oder Bilder ganz einfach selbst.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Erweitertes SEO</strong><span class="block text-sm text-gray-500">Umfassende Optimierung für bessere Sichtbarkeit.</span></div></li>
-                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Google Analytics</strong><span class="block text-sm text-gray-500">Einrichtung zur Analyse Ihrer Besucherströme.</span></div></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Google Analytics</strong><span class="block text-sm text-gray-500">Einrichtung zur Analyse Ihrer Besucherströme.</span></div></li>
                         </ul>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 glow-on-hover">Projekt starten</a>
                     </div>
 
                     <div id="premium-card" class="relative bg-white border border-gray-200 rounded-3xl p-8 card-hover fade-in-up transition-all duration-300">
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Premium</h3>
                         <p class="text-gray-600 mb-6">Für anspruchsvolle Projekte und E-Commerce.</p>
                         <p class="text-[#E86A33] text-5xl font-bold mb-6">Auf Anfrage</p>
-                        <a href="/kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8">Anfragen</a> <ul class="space-y-4 text-gray-800 text-left">
+                        <ul class="space-y-4 text-gray-800 text-left mb-8">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Unlimitierte Seiten</strong><span class="block text-sm text-gray-500">Komplexe Strukturen und umfangreiche Inhalte.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>E-Commerce-Lösung</strong><span class="block text-sm text-gray-500">Voll funktionsfähiger Online-Shop.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Benutzerdefinierte Funktionen</strong><span class="block text-sm text-gray-500">Buchungssysteme, Mitgliederbereiche etc.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Priorisierter Support</strong><span class="block text-sm text-gray-500">Schnelle Hilfe und laufende Betreuung.</span></div></li>
                         </ul>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Anfragen</a>
                     </div>
                 </div>
             </div>
@@ -130,9 +134,34 @@
                 </div>
 
                 <div id="recommender-ui" class="hidden max-w-2xl mx-auto text-left transition-opacity duration-300">
-                    <div id="rec-step-1" class="rec-step"> <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Was ist der Umfang Ihres Projekts?</label> <div class="space-y-4"> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Nur eine Seite</span> <span class="block text-sm text-gray-500">Ideal für eine Landingpage oder digitale Visitenkarte.</span> </label> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Eine kleine Webseite (2-5 Seiten)</span> <span class="block text-sm text-gray-500">Der Standard für die meisten Unternehmen und Projekte.</span> </label> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="10" class="hidden peer"> <span class="font-medium text-gray-900">Eine grössere Webseite (mehr als 5 Seiten)</span> <span class="block text-sm text-gray-500">Für umfangreiche Inhalte oder spezielle Anforderungen.</span> </label> </div> <button class="next-step-btn mt-8 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> </div>
-                    <div id="rec-step-2" class="rec-step hidden"> <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Wie wichtig ist Ihnen ein einzigartiges Design?</label> <div class="space-y-4"> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Ein sauberes, modernes Design ist ausreichend.</span> </label> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Das Design soll unsere Marke perfekt widerspiegeln.</span> </label> </div> <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button class="next-step-btn w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> </div> </div>
-                    <div id="rec-step-3" class="rec-step hidden"> <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Benötigen Sie spezielle Funktionen?</label> <div class="space-y-4"> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-ecommerce" type="checkbox" value="10" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Einen Online-Shop (E-Commerce)</span> </label> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-cms" type="checkbox" value="3" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Inhalte selbst bearbeiten (CMS)</span> </label> <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-none" type="checkbox" value="0" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Keine besonderen Funktionen benötigt</span> </label> </div> <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button id="show-recommendation-btn" class="w-1/2 bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 glow-on-hover">Empfehlung anzeigen</button> </div> </div>
+                    <div id="rec-step-1" class="rec-step"> 
+                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Was ist der Umfang Ihres Projekts?</label> 
+                        <div class="space-y-4"> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Nur eine Seite</span> <span class="block text-sm text-gray-500">Ideal für eine Landingpage oder digitale Visitenkarte.</span> </label> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Eine kleine Webseite (2-5 Seiten)</span> <span class="block text-sm text-gray-500">Der Standard für die meisten Unternehmen und Projekte.</span> </label> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="10" class="hidden peer"> <span class="font-medium text-gray-900">Eine grössere Webseite (mehr als 5 Seiten)</span> <span class="block text-sm text-gray-500">Für umfangreiche Inhalte oder spezielle Anforderungen.</span> </label> 
+                        </div> 
+                        <button class="next-step-btn mt-8 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> 
+                    </div>
+                    
+                    <div id="rec-step-2" class="rec-step hidden"> 
+                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Wie wichtig ist Ihnen ein einzigartiges Design?</label> 
+                        <div class="space-y-4"> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Ein sauberes, modernes Design ist ausreichend.</span> </label> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Das Design soll unsere Marke perfekt widerspiegeln.</span> </label> 
+                        </div> 
+                        <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button class="next-step-btn w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> </div> 
+                    </div>
+
+                    <div id="rec-step-3" class="rec-step hidden"> 
+                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Benötigen Sie spezielle Funktionen?</label> 
+                        <div class="space-y-4"> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-ecommerce" type="checkbox" value="10" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Einen Online-Shop (E-Commerce)</span> </label> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-cms" type="checkbox" value="3" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Inhalte selbst bearbeiten (CMS)</span> </label> 
+                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-none" type="checkbox" value="0" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Keine besonderen Funktionen benötigt</span> </label> 
+                        </div> 
+                        <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button id="show-recommendation-btn" class="w-1/2 bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 glow-on-hover">Empfehlung anzeigen</button> </div> 
+                    </div>
                 </div>
 
                 <div id="result-display" class="hidden mt-16 max-w-2xl mx-auto bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-lg text-center fade-in-up">
@@ -144,7 +173,7 @@
                     <a href="#packages" id="result-cta-button" class="inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
                         Zu meiner Empfehlung
                     </a>
-                     <button id="restart-recommender-btn" class="mt-4 block w-full text-center text-sm text-gray-500 hover:text-black transition">
+                      <button id="restart-recommender-btn" class="mt-4 block w-full text-center text-sm text-gray-500 hover:text-black transition">
                         Neu starten
                     </button>
                 </div>
@@ -153,20 +182,33 @@
 
     </main>
 
-   <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
-     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
-             <div class="space-y-4 md:pt-10"> <a href="/" class="inline-block"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> </a> <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> </div>
-             <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3> <ul class="space-y-2"> <li><a href="/services" class="hover:text-black transition-colors">Services</a></li> <li><a href="/prozess" class="hover:text-black transition-colors">Prozess</a></li> <li><a href="/über-uns" class="hover:text-black transition-colors">Über uns</a></li> <li><a href="/kontakt" class="hover:text-black transition-colors">Kontakt</a></li> </ul> </div>
-             <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3> <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500"> <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a> <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a> </div> </div>
-             <div class="h-28"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" class="w-full h-full rounded-lg border-2 border-gray-200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div>
-         </div>
-<div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
-    <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
-</div>
- </footer>
+    <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
+              <div class="space-y-4 md:pt-10"> <a href="./" class="inline-block"> <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-[6.7rem] -mb-10 shimmer-logo mx-auto md:mx-0"> </a> <p class="text-sm relative -top-8">Ihre Vision, digital realisiert.</p> </div>
+              <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3> <ul class="space-y-2"> <li><a href="./services" class="hover:text-black transition-colors">Services</a></li> <li><a href="./prozess" class="hover:text-black transition-colors">Prozess</a></li> <li><a href="./über-uns" class="hover:text-black transition-colors">Über uns</a></li> <li><a href="./kontakt" class="hover:text-black transition-colors">Kontakt</a></li> </ul> </div>
+              <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3> <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500"> <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a> <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a> </div> </div>
+              <div class="h-28"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" class="w-full h-full rounded-lg border-2 border-gray-200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div>
+          </div>
+        <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
+            <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
     <script src="script.js"></script>
+    
+    <script>
+      requestAnimationFrame(() => {
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+      });
+    </script>
 
 </body>
 </html>

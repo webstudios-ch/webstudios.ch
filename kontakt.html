@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-    <style>
-      body { 
-        visibility: hidden; 
-        opacity: 0; 
-      }
-    </style>
+    <style>body { visibility: hidden; opacity: 0; }</style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,50 +28,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
-    <script src="script.js"></script>
-    
-    <script>
-      requestAnimationFrame(() => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-      });
-    </script>
 <body class="bg-[#F8F7F4] text-[#2c2c2c]">
 
-<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
-    <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
-        <div class="flex-shrink-0 flex items-center">
-            <a href="./">
-                <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo">
-            </a>
-        </div>
-        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
-            <a href="./services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
-            <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
-            <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
-            <a href="./kontakt" class="text-black font-medium transition-colors duration-300 text-lg">Kontakt</a> </div>
-        <div class="hidden md:flex items-center">
-            <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
-                Gratis Offerte anfragen
-            </a>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-black focus:outline-none">
-            <span class="sr-only">Menü öffnen</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-        </button>
-    </nav>
-</header>
-<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
-    <a href="./services" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
-    <a href="./prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
-    <a href="./über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
-    <a href="./kontakt" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Kontakt</a> <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
-</div>
+    <header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+        <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="./">
+                    <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo">
+                </a>
+            </div>
+            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 space-x-10">
+                <a href="./services" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Services</a>
+                <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
+                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
+                <a href="./kontakt" class="text-black font-medium transition-colors duration-300 text-lg">Kontakt</a> 
+            </div>
+            <div class="hidden lg:flex items-center">
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
+                    Gratis Offerte anfragen
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-black focus:outline-none">
+                <span class="sr-only">Menü öffnen</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed top-24 left-4 right-4 z-40 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 p-4 space-y-2">
+        <a href="./services" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Services</a>
+        <a href="./prozess" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Prozess</a>
+        <a href="./über-uns" class="block text-center py-2 px-4 text-gray-600 hover:text-black rounded-lg hover:bg-gray-100">Über uns</a>
+        <a href="./kontakt" class="block text-center py-2 px-4 text-black rounded-lg bg-gray-100">Kontakt</a> 
+        <a href="./kontakt" class="block text-center py-3 px-4 mt-2 text-white font-semibold bg-[#E86A33] hover:bg-[#D05F2C] rounded-lg">Gratis Offerte anfragen</a>
+    </div>
 
     <main>
         <section class="pt-48 pb-16 bg-gradient-to-b from-orange-50/50 to-gray-50 text-center">
@@ -195,7 +181,7 @@
             </div>
         </section>
     </main>
-
+    
     <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
@@ -204,31 +190,46 @@
              <div> <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3> <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500"> <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a> <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a> <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a> </div> </div>
              <div class="h-28"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43470.35993454665!2d8.407150865533291!3d47.0814737112267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fff689318855b%3A0x13ef2f955593cce!2zS8O8c3NuYWNodCAoU1opLCBLw7Bzcm5hY2h0!5e0!3m2!1sde!2sch!4v1757784524249!5m2!1sde!2sch" class="w-full h-full rounded-lg border-2 border-gray-200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div>
          </div>
-<div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
-    <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
-</div>
- </footer>
+        <div class="mt-10 border-t border-gray-200 pt-6 text-center text-sm">
+            <p>© 2025 Scherrer WebStudios. Alle Rechte vorbehalten. | <a href="/impressum" class="hover:text-black transition-colors">Impressum</a> | <a href="/datenschutz" class="hover:text-black transition-colors">Datenschutzerklärung</a> | <a href="#" class="privacybee-display-preferences hover:text-black transition-colors">Cookie-Einstellungen</a></p>
+        </div>
+     </div>
+    </footer>
+
+    <script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
     <script src="script.js"></script>
-   
-
+    
     <script>
-        flatpickr.localize(flatpickr.l10ns.de);
+      requestAnimationFrame(() => {
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+      });
+    </script>
+    
+    <script>
+        // Kurzer Check, damit es keine Fehler gibt, falls flatpickr noch lädt
+        if (typeof flatpickr !== 'undefined') {
+            flatpickr.localize(flatpickr.l10ns.de);
 
-        flatpickr("#datepicker", {
-            altInput: true,
-            altFormat: "j. F Y",
-            dateFormat: "Y-m-d",
-            minDate: "today",
-        });
+            flatpickr("#datepicker", {
+                altInput: true,
+                altFormat: "j. F Y",
+                dateFormat: "Y-m-d",
+                minDate: "today",
+            });
 
-        flatpickr("#timepicker", {
-            enableTime: true,
-            noCalendar: true,
-            dateFormat: "H:i",
-            time_24hr: true,
-            minuteIncrement: 30,
-        });
+            flatpickr("#timepicker", {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true,
+                minuteIncrement: 30,
+            });
+        }
     </script>
 </body>
 </html>
