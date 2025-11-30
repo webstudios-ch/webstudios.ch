@@ -13,12 +13,13 @@
     
     <meta property="og:title" content="Unser Prozess | webstudios.ch">
     <meta property="og:description" content="Unser bewährter 4-Schritte-Prozess von der Idee bis zur fertigen Webseite.">
-    <meta property="og:image" content="https://www.webstudios.ch/social-preview.png">
+    <meta property="og:image" content="https://www.webstudios.ch/social-preview.jpg?v=5">
     <meta property="og:url" content="https://www.webstudios.ch/prozess">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="webstudios">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -69,7 +70,11 @@
     <main>
         <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-6 fade-in-up">Unsere Vorgehensweise</h1>
+                
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 fade-in-up break-words">
+                    Unsere Vorgehensweise
+                </h1>
+                
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto fade-in-up">Vom ersten Gespräch bis zum Livegang – wir begleiten unsere Partner mit einem klaren und transparenten Prozess.</p>
             </div>
         </section>
@@ -83,7 +88,7 @@
 
                     <div class="col-start-2 lg:col-start-3 row-start-1 my-8 fade-in-up">
                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">☕️ Erstgespräch & Analyse</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -97,7 +102,7 @@
 
                     <div class="col-start-2 lg:col-start-1 row-start-2 my-8 fade-in-up justify-self-stretch lg:justify-self-end text-left lg:text-right">
                             <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">🧭 Strategie & Konzeption</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -111,7 +116,7 @@
 
                     <div class="col-start-2 lg:col-start-3 row-start-3 my-8 fade-in-up">
                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">🎨 Design & Prototyping</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -125,7 +130,7 @@
 
                     <div class="col-start-2 lg:col-start-1 row-start-4 my-8 fade-in-up justify-self-stretch lg:justify-self-end text-left lg:text-right">
                             <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">💻 Entwicklung & Umsetzung</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -139,7 +144,7 @@
 
                     <div class="col-start-2 lg:col-start-3 row-start-5 my-8 fade-in-up">
                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">💬 Feedback & Korrekturen</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -153,7 +158,7 @@
 
                     <div class="col-start-2 lg:col-start-1 row-start-6 my-8 fade-in-up justify-self-stretch lg:justify-self-end text-left lg:text-right">
                             <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">🚀 Launch & Go-Live</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -167,7 +172,7 @@
 
                     <div class="col-start-2 lg:col-start-3 row-start-7 my-8 fade-in-up">
                         <div class="bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:border-gray-300">
-                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6">
+                            <button class="accordion-toggle w-full flex justify-between items-center text-left p-6" onclick="toggleAccordion(this)">
                                 <h3 class="font-bold text-gray-900 text-lg sm:text-xl">🛠️ Support & Wartung</h3>
                                 <svg class="accordion-icon w-6 h-6 text-gray-500 transition-transform duration-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </button>
@@ -214,7 +219,15 @@
                  </ul>
              </div>
              
-             
+             <div>
+                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                 <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-500">
+                     <a href="#" class="hover:text-black transition-colors" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                     <a href="#" class="hover:text-black transition-colors" title="Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="#" class="hover:text-black transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                     <a href="#" class="hover:text-black transition-colors" title="YouTube"><i class="fab fa-youtube"></i></a>
+                 </div>
+             </div>
              
              <div class="h-28"> 
                  <h3 class="text-lg font-semibold text-gray-900 mb-4">Standort</h3>
@@ -243,10 +256,33 @@
     <script src="script.js"></script>
     
     <script>
+      // 1. FOUC Fix
       requestAnimationFrame(() => {
         document.body.style.visibility = 'visible';
         document.body.style.opacity = '1';
       });
+
+      // 2. Accordion Fix (Sicherheit)
+      function toggleAccordion(button) {
+          const icon = button.querySelector(".accordion-icon");
+          if (icon) icon.classList.toggle("rotate-180");
+          
+          const content = button.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null; 
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px"; 
+          }
+      }
+
+      // 3. Mobile Menu Fix
+      const menuBtn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if(menuBtn && menu) {
+        menuBtn.onclick = function() {
+            menu.classList.toggle('hidden');
+        }
+      }
     </script>
 
 </body>
