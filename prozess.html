@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-    <style>body { visibility: hidden; opacity: 0; }</style>
+    <style>
+  body { 
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in forwards; 
+    animation-delay: 0.2s; 
+  }
+  @keyframes fadeIn { to { opacity: 1; } }
+</style><style>body { visibility: hidden; opacity: 0; }</style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,8 +78,8 @@
         <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
                 
-                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 fade-in-up break-words">
-                    Unsere Vorgehensweise
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 fade-in-up hyphens-auto">
+                    Unsere Vorgehens&shy;weise
                 </h1>
                 
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto fade-in-up">Vom ersten Gespräch bis zum Livegang – wir begleiten unsere Partner mit einem klaren und transparenten Prozess.</p>
@@ -262,7 +269,7 @@
         document.body.style.opacity = '1';
       });
 
-      // 2. Accordion Fix (Sicherheit)
+      // 2. Accordion Fix
       function toggleAccordion(button) {
           const icon = button.querySelector(".accordion-icon");
           if (icon) icon.classList.toggle("rotate-180");
