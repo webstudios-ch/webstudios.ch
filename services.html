@@ -51,23 +51,19 @@
 
 <body class="bg-[#F8F7F4] text-[#2c2c2c]">
 
-<header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+    <header class="fixed top-0 w-full z-[100] p-4 flex justify-center">
         <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
             <div class="flex-shrink-0 flex items-center">
-                <a href="./">
-                    <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo">
-                </a>
+                <a href="./"><img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"></a>
             </div>
             <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 space-x-10">
-                <a href="./services" class="text-black font-medium transition-colors duration-300 text-lg">Services</a>
-                <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
-                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
-                <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
+                <a href="./services" class="text-black font-medium transition-colors duration-300 text-xl">Services</a>
+                <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-xl">Prozess</a>
+                <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-xl">Über uns</a>
+                <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-xl">Kontakt</a>
             </div>
             <div class="hidden lg:flex items-center">
-                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
-                    Gratis Offerte anfragen
-                </a>
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">Gratis Offerte anfragen</a>
             </div>
             <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-black focus:outline-none">
                 <span class="sr-only">Menü öffnen</span>
@@ -189,8 +185,8 @@
 
         <section id="packages" class="py-24 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div id="starter-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 fade-in-up">
+                    <div id="starter-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover">
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Starter</h3>
                         <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Ideal für den ersten professionellen Online-Auftritt.</p></div>
                         <div class="min-h-[60px] flex items-end"><p class="text-[#E86A33] text-5xl font-bold">CHF 99</p></div>
@@ -203,7 +199,7 @@
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Basic SEO</strong><span class="block text-sm text-gray-500">Grundlegende Optimierung für Google.</span></div></li>
                         </ul>
                     </div>
-                    <div id="business-card" class="bg-white ring-2 ring-inset ring-orange-500 rounded-3xl p-8 card-hover fade-in-up relative shadow-xl z-10 overflow-hidden">
+                    <div id="business-card" class="bg-white ring-2 ring-inset ring-orange-500 rounded-3xl p-8 card-hover relative shadow-xl z-10 overflow-hidden">
                         <span class="absolute top-0 right-0 bg-[#E86A33] text-white text-sm font-bold px-4 py-1 rounded-bl-lg rounded-tr-3xl">Beliebteste Wahl</span>
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Business</h3>
                         <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Die Komplettlösung für wachsende Unternehmen.</p></div>
@@ -218,7 +214,7 @@
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Besucher-Statistik</strong><span class="block text-sm text-gray-500"> Monatlicher Bericht über Ihre Webseiten-Besucher.</span></div></li>
                         </ul>
                     </div>
-                    <div id="individuell-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover fade-in-up">
+                    <div id="individuell-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover">
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Individuell</h3>
                         <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Für anspruchsvolle Projekte und E-Commerce.</p></div>
                         <div class="min-h-[60px] flex items-end"><p class="text-[#E86A33] text-5xl font-bold">Auf Anfrage</p></div>
