@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-    <style>body { visibility: hidden; opacity: 0; }</style>
+    <style>body { visibility: hidden; opacity: 0; transition: opacity 0.5s ease; }</style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,47 +11,60 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
-    <meta property="og:title" content="Services & Preise | webstudios.ch">
-    <meta property="og:description" content="Transparente Webdesign-Pakete für KMU. Finden Sie das passende Angebot.">
-    <meta property="og:image" content="https://www.webstudios.ch/social-preview.jpg?v=5">
-    <meta property="og:url" content="https://www.webstudios.ch/services">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="webstudios">
-
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <style>
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        
+        .highlight-pulse { animation: pulseBorder 2s infinite; border-color: #E86A33 !important; }
+        @keyframes pulseBorder { 
+            0% { box-shadow: 0 0 0 0 rgba(232, 106, 51, 0.7); } 
+            70% { box-shadow: 0 0 0 10px rgba(232, 106, 51, 0); } 
+            100% { box-shadow: 0 0 0 0 rgba(232, 106, 51, 0); } 
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: white; 
+            z-index: 1;
+        }
+        
+        .card-hover:hover {
+            translate: 0 -12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+            z-index: 40;
+            border-color: #d1d5db; 
+        }
+
+        .glow-on-hover:hover { box-shadow: 0 4px 15px rgba(232, 106, 51, 0.4); }
+
+        .rec-step { transition: opacity 0.3s ease-in-out; opacity: 1; }
+        .rec-step.fading-out { opacity: 0 !important; }
+    </style>
 </head>
 
 <body class="bg-[#F8F7F4] text-[#2c2c2c]">
 
-    <header class="fixed top-0 w-full z-50 p-4 flex justify-center">
+    <header class="fixed top-0 w-full z-[100] p-4 flex justify-center">
         <nav class="relative w-full max-w-6xl flex justify-between items-center px-6 py-2 bg-white/50 backdrop-blur-lg rounded-full border border-gray-200">
-            
             <div class="flex-shrink-0 flex items-center">
-                <a href="./">
-                    <img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"> 
-                </a>
+                <a href="./"><img src="logo.png" alt="webstudios Logo" class="h-32 w-auto -mt-10 -mb-10 shimmer-logo"></a>
             </div>
-
             <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 space-x-10">
                 <a href="./services" class="text-black font-medium transition-colors duration-300 text-lg">Services</a>
                 <a href="./prozess" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Prozess</a>
                 <a href="./über-uns" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Über uns</a>
                 <a href="./kontakt" class="text-gray-500 hover:text-black font-medium transition-colors duration-300 text-lg">Kontakt</a>
             </div>
-            
             <div class="hidden lg:flex items-center">
-                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">
-                    Gratis Offerte anfragen
-                </a>
+                <a href="./kontakt" class="bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-2 px-5 rounded-full transition-colors duration-300">Gratis Offerte anfragen</a>
             </div>
-
             <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-black focus:outline-none">
                 <span class="sr-only">Menü öffnen</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
@@ -68,25 +81,117 @@
     </div>
 
     <main>
-        <section class="pt-48 pb-24 bg-gradient-to-b from-orange-50/50 to-gray-50 text-center">
+        <section class="pt-48 pb-12 bg-gradient-to-b from-orange-50/50 to-gray-50 text-center">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 fade-in-up">
                 <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900">Transparente Preise für Ihren Erfolg.</h1>
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Finden Sie das perfekte Paket, das mit Ihrem Unternehmen wächst. Alle Angebote sind flexibel anpassbar.</p>
             </div>
         </section>
 
+        <section id="recommender" class="py-12 bg-white border-b border-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                
+                <div id="recommender-start" class="fade-in-up transition-opacity duration-300">
+                    <h2 class="text-3xl font-bold text-gray-900">Unsicher welches Paket?</h2>
+                    <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Beantworten Sie 3 kurze Fragen und wir zeigen Ihnen die ideale Lösung.</p>
+                    <button id="start-recommender-btn" class="mt-6 inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 glow-on-hover shadow-md">
+                        Quiz starten
+                    </button>
+                </div>
+                
+                <div id="recommender-ui" class="hidden max-w-2xl mx-auto text-left transition-opacity duration-300 min-h-[550px]">
+                    
+                    <div id="rec-step-1" class="rec-step"> 
+                        <label class="font-bold text-gray-900 text-2xl mb-8 block text-center">Was für eine Website brauchst du?</label> 
+                        <div class="space-y-4"> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input type="radio" name="page-count" value="1" class="hidden peer"> 
+                                <div class="text-2xl">🎯</div>
+                                <div><span class="font-bold text-gray-900 block">Landingpage (Onepager)</span><span class="text-sm text-gray-500">Kompakt und stark, ideal für Kampagnen.</span></div>
+                            </label> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input type="radio" name="page-count" value="5" class="hidden peer"> 
+                                <div class="text-2xl">🏢</div>
+                                <div><span class="font-bold text-gray-900 block">Professionelle KMU-Website</span><span class="text-sm text-gray-500">3-5 Seiten, der Standard für Firmen.</span></div>
+                            </label> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input type="radio" name="page-count" value="10" class="hidden peer"> 
+                                <div class="text-2xl">🚀</div>
+                                <div><span class="font-bold text-gray-900 block">Online-Shop / Gastro / Portal</span><span class="text-sm text-gray-500">Umfangreiche Funktionen und Design.</span></div>
+                            </label> 
+                        </div> 
+                        <button class="next-step-btn mt-8 w-full bg-gray-900 hover:bg-black text-white font-bold py-4 px-8 rounded-xl transition duration-300">Weiter</button> 
+                    </div>
+
+                    <div id="rec-step-2" class="rec-step hidden"> 
+                        <label class="font-bold text-gray-900 text-2xl mb-8 block text-center">Hast du bereits eine Website?</label> 
+                        <div class="space-y-4"> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input type="radio" name="design-need" value="1" class="hidden peer"> 
+                                <div class="text-2xl">🆕</div>
+                                <div><span class="font-bold text-gray-900 block">Nein, ich starte bei null</span><span class="text-sm text-gray-500">Wir bauen das Fundament gemeinsam auf.</span></div>
+                            </label> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input type="radio" name="design-need" value="5" class="hidden peer"> 
+                                <div class="text-2xl">♻️</div>
+                                <div><span class="font-bold text-gray-900 block">Ja, aber sie braucht ein Update</span><span class="text-sm text-gray-500">Relaunch, Modernisierung oder Umbau.</span></div>
+                            </label> 
+                        </div> 
+                        <div class="flex space-x-4 mt-8"> 
+                            <button class="prev-step-btn w-1/3 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-4 px-8 rounded-xl transition duration-300 border border-gray-300">Zurück</button> 
+                            <button class="next-step-btn w-2/3 bg-gray-900 hover:bg-black text-white font-bold py-4 px-8 rounded-xl transition duration-300">Weiter</button> 
+                        </div> 
+                    </div>
+
+                    <div id="rec-step-3" class="rec-step hidden"> 
+                        <label class="font-bold text-gray-900 text-2xl mb-8 block text-center">Wer kümmert sich um Updates & Sicherheit?</label> 
+                        <div class="space-y-4"> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input id="feature-cms" type="checkbox" value="5" class="hidden peer feature-checkbox"> 
+                                <div class="text-2xl">🛡️</div>
+                                <div><span class="font-bold text-gray-900 block">WebStudios soll das machen (Sicher & Entspannt)</span><span class="text-sm text-gray-500">Inkl. Hosting, Backups und kleinen Änderungen.</span></div>
+                            </label> 
+                            <label class="cursor-pointer p-6 bg-white border-2 border-gray-100 rounded-2xl flex items-center gap-4 hover:border-gray-300 has-[:checked]:border-[#E86A33] has-[:checked]:bg-orange-50 transition-all duration-200"> 
+                                <input id="feature-none" type="checkbox" value="0" class="hidden peer feature-checkbox"> 
+                                <div class="text-2xl">🛠️</div>
+                                <div><span class="font-bold text-gray-900 block">Mache ich selbst</span><span class="text-sm text-gray-500">Ich habe technisches Know-How.</span></div>
+                            </label> 
+                        </div> 
+                        <div class="flex space-x-4 mt-8"> 
+                            <button class="prev-step-btn w-1/3 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-4 px-8 rounded-xl transition duration-300 border border-gray-300">Zurück</button> 
+                            <button id="show-recommendation-btn" class="w-2/3 bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-4 px-8 rounded-xl transition duration-300 glow-on-hover shadow-lg transform hover:-translate-y-1">Ergebnis anzeigen</button> 
+                        </div> 
+                    </div>
+                </div>
+
+                <div id="result-display" class="hidden mt-10 max-w-2xl mx-auto bg-white border-2 border-gray-100 p-8 sm:p-12 rounded-[2rem] shadow-xl text-center fade-in-up">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /> </svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-500 mb-2">Unsere Empfehlung:</h3>
+                    <p id="recommended-package-name" class="text-4xl md:text-5xl font-extrabold text-[#E86A33] mt-2 mb-4 tracking-tight"></p>
+                    <p id="recommendation-reason" class="text-gray-600 text-lg mb-10 leading-relaxed"></p>
+
+                    <button onclick="scrollToPackage()" id="result-cta-button" class="inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-4 px-12 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Zum Angebot ↓
+                    </button>
+                    
+                    <button id="restart-button-final" class="mt-6 block w-full text-center text-sm text-gray-400 hover:text-gray-800 transition underline">
+                        Quiz neu starten
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <section id="packages" class="py-24 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                    
-                    <div id="starter-card" class="relative bg-white border border-gray-200 rounded-3xl p-8 card-hover fade-in-up transition-all duration-300">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div id="starter-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover fade-in-up">
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Starter</h3>
-                        <p class="text-gray-600 mb-4">Ideal für den ersten professionellen Online-Auftritt.</p>
-                        
-                        <p class="text-[#E86A33] text-5xl font-bold mb-1">CHF 99.90</p>
-                        <p class="text-gray-400 text-sm font-medium mb-6">zzgl. CHF 29.– / Monat für Hosting & Domain</p>
-                        
-                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8">Projekt starten</a> 
+                        <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Ideal für den ersten professionellen Online-Auftritt.</p></div>
+                        <div class="min-h-[60px] flex items-end"><p class="text-[#E86A33] text-5xl font-bold">CHF 99</p></div>
+                        <div class="min-h-[50px] mt-2 mb-8"><p class="text-gray-400 text-sm font-medium">zzgl. CHF 29.– / Monat für Hosting & Domain</p></div>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8 mt-auto">Projekt starten</a> 
                         <ul class="space-y-4 text-gray-800 text-left">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>1 Seite (Onepager)</strong><span class="block text-sm text-gray-500">Alles Wichtige kompakt auf einer Seite.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Responsive Design</strong><span class="block text-sm text-gray-500">Perfekte Darstellung auf allen Geräten.</span></div></li>
@@ -94,102 +199,46 @@
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Basic SEO</strong><span class="block text-sm text-gray-500">Grundlegende Optimierung für Google.</span></div></li>
                         </ul>
                     </div>
-
-                    <div id="business-card" class="bg-white ring-2 ring-inset ring-orange-500 rounded-3xl p-8 card-hover fade-in-up relative transform lg:scale-110 overflow-hidden transition-all duration-300">
+                    <div id="business-card" class="bg-white ring-2 ring-inset ring-orange-500 rounded-3xl p-8 card-hover fade-in-up relative shadow-xl z-10 overflow-hidden">
                         <span class="absolute top-0 right-0 bg-[#E86A33] text-white text-sm font-bold px-4 py-1 rounded-bl-lg rounded-tr-3xl">Beliebteste Wahl</span>
-                        <h3 class="text-3xl font-semibold text-gray-900 mb-2 mt-6">Business</h3>
-                        <p class="text-gray-600 mb-4">Die Komplettlösung für wachsende Unternehmen.</p>
-                        
-                        <p class="text-[#E86A33] text-5xl font-bold mb-1">CHF 249.90</p>
-                        <p class="text-gray-400 text-sm font-medium mb-6">zzgl. CHF 49.– / Monat (Hosting, Domain & Service)</p>
-
-                        <a href="./kontakt" class="w-full text-center inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 mb-8 glow-on-hover">Projekt starten</a> 
+                        <h3 class="text-3xl font-semibold text-gray-900 mb-2">Business</h3>
+                        <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Die Komplettlösung für wachsende Unternehmen.</p></div>
+                        <div class="min-h-[60px] flex items-end"><p class="text-[#E86A33] text-5xl font-bold">CHF 249</p></div>
+                        <div class="min-h-[50px] mt-2 mb-8"><p class="text-gray-400 text-sm font-medium">zzgl. CHF 49.– / Monat (Hosting, Domain & Service)</p></div>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 mb-8 glow-on-hover mt-auto">Projekt starten</a> 
                         <ul class="space-y-4 text-gray-800 text-left">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Bis zu 5 Unterseiten</strong><span class="block text-sm text-gray-500">z.B. Home, Über uns, Leistungen, Kontakt.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Individuelles Design</strong><span class="block text-sm text-gray-500">Einzigartiges Design, das Ihre Marke widerspiegelt.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Smart-Content (CMS)</strong><span class="block text-sm text-gray-500">Inhalte via Software selber ändern.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Erweitertes SEO/GEO</strong><span class="block text-sm text-gray-500">Umfassende Optimierung für bessere Sichtbarkeit.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Besucher-Statistik</strong><span class="block text-sm text-gray-500"> Monatlicher Bericht über Ihre Webseiten-Besucher.</span></div></li>
-                            
                         </ul>
                     </div>
-
-                    <div id="premium-card" class="relative bg-white border border-gray-200 rounded-3xl p-8 card-hover fade-in-up transition-all duration-300">
+                    <div id="individuell-card" class="relative bg-white border-2 border-gray-200 rounded-3xl p-8 card-hover fade-in-up">
                         <h3 class="text-3xl font-semibold text-gray-900 mb-2">Individuell</h3>
-                        <p class="text-gray-600 mb-6">Für anspruchsvolle Projekte und E-Commerce.</p>
-                        
-                        <p class="text-[#E86A33] text-5xl font-bold mb-1">Auf Anfrage</p>
-                        <p class="text-gray-400 text-sm font-medium mb-6">Service-Abo nach Bedarf (ab CHF 69.–)</p>
-                        
-                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8">Anfragen</a> 
+                        <div class="min-h-[60px] flex items-start"><p class="text-gray-600">Für anspruchsvolle Projekte und E-Commerce.</p></div>
+                        <div class="min-h-[60px] flex items-end"><p class="text-[#E86A33] text-5xl font-bold">Auf Anfrage</p></div>
+                        <div class="min-h-[50px] mt-2 mb-8"><p class="text-gray-400 text-sm font-medium">Service-Abo nach Bedarf (ab CHF 69.–)</p></div>
+                        <a href="./kontakt" class="w-full text-center inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 mb-8 mt-auto">Anfragen</a> 
                         <ul class="space-y-4 text-gray-800 text-left">
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Unlimitierte Unterseiten</strong><span class="block text-sm text-gray-500">Komplexe Strukturen und umfangreiche Inhalte.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>E-Commerce-Lösung</strong><span class="block text-sm text-gray-500">Voll funktionsfähiger Online-Shop.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Spezialfunktionen</strong><span class="block text-sm text-gray-500">Buchungssysteme, Mitgliederbereiche etc.</span></div></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>Priorisierter Support</strong><span class="block text-sm text-gray-500">Schnelle Hilfe und laufende Betreuung.</span></div></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>AI & Automation</strong><span class="block text-sm text-gray-500">Einbindung modernster KI-Tools für Ihren Vorsprung.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-[#E86A33] mt-1 mr-3 flex-shrink-0"></i><div><strong>AI & Automation</strong><span class="block text-sm text-gray-500">Einbindung modernster KI-Tools für Ihren Vorsprung.</span></div></li>
                         </ul>
                     </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="recommender" class="py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div id="recommender-start" class="fade-in-up">
-                    <h2 class="text-4xl font-bold text-gray-900">Welches Paket passt zu Ihnen?</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Unsicher? Beantworten Sie ein paar kurze Fragen und erhalten Sie eine persönliche Empfehlung.</p>
-                    <button id="start-recommender-btn" class="mt-8 inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 glow-on-hover">
-                        Empfehlung starten
-                    </button>
                 </div>
                 
-                <div id="recommender-ui" class="hidden max-w-2xl mx-auto text-left transition-opacity duration-300">
-                    <div id="rec-step-1" class="rec-step"> 
-                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Was ist der Umfang Ihres Projekts?</label> 
-                        <div class="space-y-4"> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Nur eine Seite</span> <span class="block text-sm text-gray-500">Ideal für eine Landingpage oder digitale Visitenkarte.</span> </label> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Eine kleine Webseite (2-5 Seiten)</span> <span class="block text-sm text-gray-500">Der Standard für die meisten Unternehmen und Projekte.</span> </label> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="page-count" value="10" class="hidden peer"> <span class="font-medium text-gray-900">Eine grössere Webseite (mehr als 5 Seiten)</span> <span class="block text-sm text-gray-500">Für umfangreiche Inhalte oder spezielle Anforderungen.</span> </label> 
-                        </div> 
-                        <button class="next-step-btn mt-8 w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> 
-                    </div>
-                    <div id="rec-step-2" class="rec-step hidden"> 
-                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Wie wichtig ist Ihnen ein einzigartiges Design?</label> 
-                        <div class="space-y-4"> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="1" class="hidden peer"> <span class="font-medium text-gray-900">Ein sauberes, modernes Design ist ausreichend.</span> </label> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input type="radio" name="design-need" value="5" class="hidden peer"> <span class="font-medium text-gray-900">Das Design soll unsere Marke perfekt widerspiegeln.</span> </label> 
-                        </div> 
-                        <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button class="next-step-btn w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Weiter</button> </div> 
-                    </div>
-                    <div id="rec-step-3" class="rec-step hidden"> 
-                        <label class="font-semibold text-gray-900 text-xl mb-6 block text-center">Benötigen Sie spezielle Funktionen?</label> 
-                        <div class="space-y-4"> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-ecommerce" type="checkbox" value="10" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Einen Online-Shop (E-Commerce)</span> </label> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-cms" type="checkbox" value="3" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Inhalte selbst bearbeiten (CMS)</span> </label> 
-                            <label class="block cursor-pointer p-5 bg-white border border-gray-200 rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-orange-500 has-[:checked]:border-orange-500 transition-all duration-200 hover:border-gray-400"> <input id="feature-none" type="checkbox" value="0" class="hidden peer feature-checkbox"> <span class="font-medium text-gray-900">Keine besonderen Funktionen benötigt</span> </label> 
-                        </div> 
-                        <div class="flex space-x-4 mt-8"> <button class="prev-step-btn w-1/2 bg-transparent hover:bg-gray-100 text-gray-700 font-bold py-3 px-8 rounded-full transition duration-300 border border-gray-300">Zurück</button> <button id="show-recommendation-btn" class="w-1/2 bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 glow-on-hover">Empfehlung anzeigen</button> </div> 
-                    </div>
-                </div>
-
-                <div id="result-display" class="hidden mt-16 max-w-2xl mx-auto bg-white border border-gray-200 p-8 sm:p-10 rounded-3xl shadow-lg text-center fade-in-up">
-                    <svg class="h-12 w-12 text-green-500 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Ihre persönliche Empfehlung:</h3>
-                    <p id="recommended-package-name" class="text-4xl font-bold text-[#E86A33] mt-2 mb-4"></p>
-                    <p id="recommendation-reason" class="text-gray-600 mb-8"></p>
-
-                    <a href="#packages" id="result-cta-button" class="inline-block bg-[#E86A33] hover:bg-[#D05F2C] text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-                        Zu meiner Empfehlung
+                <div class="mt-20 text-center fade-in-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Unsicher, was das Richtige ist?</h3>
+                    <p class="text-gray-600 mb-8 max-w-xl mx-auto">Lassen Sie uns kurz über Ihr Projekt sprechen. Wir finden gemeinsam heraus, welches Paket am besten passt.</p>
+                    <a href="./kontakt" class="inline-block bg-gray-900 hover:bg-black text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 shadow-md">
+                        Kostenlose Beratung vereinbaren
                     </a>
-                      <button id="restart-recommender-btn" class="mt-4 block w-full text-center text-sm text-gray-500 hover:text-black transition">
-                        Neu starten
-                    </button>
                 </div>
             </div>
         </section>
-
     </main>
     
     <footer class="bg-white text-gray-500 py-12 border-t border-gray-200">
@@ -206,13 +255,6 @@
      </div>
     </footer>
 
-    <script src="https://app.privacybee.io/cookie-banner.js" website-id="cmhjhi5b404opy97sv5uffi8j" defer></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
-
-    <script src="script.js"></script>
-    
     <script>
       // 1. FOUC Fix
       requestAnimationFrame(() => {
@@ -220,15 +262,164 @@
         document.body.style.opacity = '1';
       });
 
-      // 2. Mobile Menu Fix
+      // 2. Mobile Menu
       const menuBtn = document.getElementById('mobile-menu-button');
       const menu = document.getElementById('mobile-menu');
       if(menuBtn && menu) {
-        menuBtn.onclick = function() {
-            menu.classList.toggle('hidden');
-        }
+        menuBtn.onclick = function() { menu.classList.toggle('hidden'); }
       }
-    </script>
 
+      // 3. QUIZ LOGIK
+      let currentQuizStep = 0;
+      let targetPackageID = "";
+
+      // Step Wechsel (animiert)
+      function switchStep(fromId, toId) {
+          const fromEl = document.getElementById(fromId);
+          const toEl = document.getElementById(toId);
+          if (!fromEl || !toEl) return;
+
+          fromEl.classList.add('fading-out');
+          setTimeout(() => {
+              fromEl.classList.add('hidden'); 
+              fromEl.classList.remove('fading-out'); 
+              
+              toEl.classList.add('fading-out'); 
+              toEl.classList.remove('hidden');  
+              void toEl.offsetWidth; 
+              toEl.classList.remove('fading-out');
+          }, 300);
+      }
+
+      // START BUTTON
+      document.getElementById('start-recommender-btn').addEventListener('click', () => {
+          const startScreen = document.getElementById('recommender-start');
+          const uiContainer = document.getElementById('recommender-ui');
+          
+          startScreen.classList.add('opacity-0'); 
+          setTimeout(() => {
+              startScreen.classList.add('hidden');
+              startScreen.style.display = 'none'; // HARD HIDE
+              
+              uiContainer.classList.remove('hidden');
+              void uiContainer.offsetWidth;
+              uiContainer.classList.remove('opacity-0'); 
+              currentQuizStep = 1;
+          }, 300);
+      });
+
+      // NAV BUTTONS
+      document.querySelectorAll('.next-step-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+              switchStep(`rec-step-${currentQuizStep}`, `rec-step-${currentQuizStep + 1}`);
+              currentQuizStep++;
+          });
+      });
+
+      document.querySelectorAll('.prev-step-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+              switchStep(`rec-step-${currentQuizStep}`, `rec-step-${currentQuizStep - 1}`);
+              currentQuizStep--;
+          });
+      });
+
+      // ERGEBNIS ANZEIGEN
+      document.getElementById('show-recommendation-btn').addEventListener('click', () => {
+          const pageCount = document.querySelector('input[name="page-count"]:checked')?.value || "1";
+          const cmsChecked = document.getElementById('feature-cms')?.checked || false;
+
+          let packageTitle = "Starter";
+          let packageReason = "Für einen kompakten und professionellen Start ist dieses Paket vollkommen ausreichend.";
+          targetPackageID = "starter-card";
+
+          if (pageCount === "10") {
+              packageTitle = "Individuell";
+              packageReason = "Ihr Projekt erfordert massgeschneiderte Lösungen, viele Unterseiten oder E-Commerce.";
+              targetPackageID = "individuell-card";
+          } else if (pageCount === "5" || cmsChecked) {
+              packageTitle = "Business";
+              packageReason = "Die perfekte Balance: CMS zum selber ändern, SEO und genug Platz für Ihre Inhalte.";
+              targetPackageID = "business-card";
+          } 
+
+          const uiContainer = document.getElementById('recommender-ui');
+          const resultDisplay = document.getElementById('result-display');
+          
+          uiContainer.classList.add('opacity-0');
+          setTimeout(() => {
+              uiContainer.classList.add('hidden');
+              uiContainer.classList.remove('opacity-0'); 
+              
+              // WICHTIG: Inline Display clearen, damit fade-out beim nächsten mal wieder geht
+              uiContainer.style.display = '';
+
+              document.getElementById('recommended-package-name').innerText = packageTitle;
+              document.getElementById('recommendation-reason').innerText = packageReason;
+              
+              resultDisplay.classList.remove('hidden');
+          }, 300);
+      });
+
+      // 4. DER FINAL FIX FÜR DEN NEUSTART
+      const restartBtn = document.getElementById('restart-button-final');
+      
+      restartBtn.addEventListener('click', function(e) {
+          e.preventDefault(); 
+          
+          // Elemente holen
+          const resultDisplay = document.getElementById('result-display');
+          const startScreen = document.getElementById('recommender-start');
+          const uiContainer = document.getElementById('recommender-ui');
+
+          // 1. Resultat verstecken
+          resultDisplay.classList.add('hidden');
+
+          // 2. Start-Screen HART verstecken
+          startScreen.classList.add('hidden');
+          startScreen.style.display = 'none';
+
+          // 3. Quiz Container anzeigen
+          uiContainer.classList.remove('hidden');
+          uiContainer.style.display = 'block'; 
+          // WICHTIG: opacity resetten, falls sie irgendwo auf 0 war
+          uiContainer.classList.remove('opacity-0');
+          uiContainer.style.opacity = '1';
+
+          // 4. Frage 1 (Step 1) anzeigen
+          const step1 = document.getElementById('rec-step-1');
+          step1.classList.remove('hidden');
+          step1.classList.remove('fading-out');
+          step1.style.opacity = '1';
+
+          // 5. Andere Fragen verstecken
+          document.getElementById('rec-step-2').classList.add('hidden');
+          document.getElementById('rec-step-3').classList.add('hidden');
+
+          // 6. Reset Logic
+          currentQuizStep = 1;
+          document.querySelectorAll('input').forEach(i => i.checked = false);
+
+          // 7. Hochscrollen
+          uiContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      // 5. DER FIX FÜR DAS VERSCHWINDENDE ANGEBOT
+      window.scrollToPackage = function() {
+          const element = document.getElementById(targetPackageID);
+          if(element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              
+              setTimeout(() => {
+                  // HIER IST DER FIX: Alte Animation entfernen!
+                  // Sonst springt das Element auf opacity: 0 zurück
+                  element.classList.remove('fade-in-up'); 
+                  element.style.opacity = '1'; // Sicherheitshalber
+
+                  element.classList.add('highlight-pulse');
+                  setTimeout(() => element.classList.remove('highlight-pulse'), 3000);
+              }, 800);
+          }
+      };
+    </script>
 </body>
 </html>

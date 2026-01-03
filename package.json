@@ -20,5 +20,8 @@
   "homepage": "https://github.com/webstudios-ch/webstudios.ch#readme",
   "devDependencies": {
     "tailwindcss": "^4.1.16"
+  },
+  "dependencies": {
+    "motion": "^12.23.26"
   }
 }
